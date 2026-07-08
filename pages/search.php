@@ -2,10 +2,6 @@
     include('../inc/functions.php');
 
     $departments = get_all_departments();
-    usort($departments,function($a,$b){
-        return strcmp($a['dept_name'],$b['dept_name']);
-    });
-
     // Récupération des critères (?? '' évite le warning si le champ est absent)
     $dept_no = $_GET['dept_no'] ?? '';
     $name    = $_GET['name']    ?? '';
